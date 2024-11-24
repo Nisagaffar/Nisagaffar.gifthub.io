@@ -1,0 +1,161 @@
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial scale=1">
+	<title>Home</title>
+	<style type= "text/css">
+	body {
+		margin: 0px;
+		padding:0px;
+		height: 100%;
+		display: flex;
+		justify-content: center;
+		background-image: url("motor.png");
+		background-height: 100%;
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover;
+		position: relative;
+		overflow-x: hidden;
+		overflow-y: hidden;
+	}
+	nav{
+		display: flex; 
+		align-items:center; 
+		justify-content:space-between;
+	        top:22px;
+                padding: 15 rem;
+		position:absolute;
+		width: 100%;	
+	}
+	.logo a{
+		font-family: Arial black, sans-serif;
+		font-size:28px; 
+		font-weight:600; 
+		color:#9b59b6;
+		text-decoration: none;
+		margin-left: 20px;
+		padding: 10px 20px;
+		border: 2px solid #9b59b6;
+		border-radius: 8px;
+		box-shadow: 0 0 15px 5px rgba(155, 85, 182, 0.8);
+		
+	}
+	ul{
+		margin:0px;
+		padding:0px;
+		display:flex;
+	}
+	li {
+		list-style:none; 
+		margin-right:25px;
+	}
+	li a {
+		color: white; 
+		font-size:18px; 
+		font-weight:bold; 
+		text-decoration:none;
+		padding: 5px 10px;
+		border: 1px solid #9b59b6;
+		border-radius: 10px;
+		box-shadow: 0 0 15px 5px rgba(155, 85, 182, 0.8);
+	}
+	button{
+		background-color:grey; 
+		margin-left:10px; 
+		border-radius:30 px; 
+		padding:10px; 
+		width:90px;
+		border:none;
+		cursor:pointer;
+	}
+	button a{
+		color: white; 
+		font-weight:bold; 
+		font-size:15px;
+	}
+        li a:hover {
+                background-color: #6a0dad;
+	        transform: scale(1.1);
+        }
+	.audio-box {
+		align-items=right;
+		position: absolute;
+	   	bottom: 180px;
+	    	left: 73%;
+		margin-right: 20px;
+		padding: 10px 20px;
+		border: 2px solid #9b59b6;
+		border-radius: 10px;
+		box-shadow: 0 0 15px 5px rgba(155, 85, 182, 0.8);
+		background: #f3eef5;
+	}
+	.audio-text {
+            font-size: 16px;
+            color: #6a0dad;
+            font-weight: bold;
+            margin-bottom: 5px;
+	    text-align: center;
+	    
+	}	
+	#clock {
+		font-size: 18px;
+		color: white;
+		font-weight: bold;
+		margin-top: 10px;
+		margin-right: 500px;
+		padding: 10px 20px;
+		border: 2px solid #9d9d9d;
+		border-radius: 10px;
+		box-shadow: 0 0 15px 5px rgba(155, 85, 182, 0.8);
+		background: black;
+	}
+	
+	</style>
+
+</head>
+<body>		<div class="audio-box">
+        	<div class="audio-text">PLAY THIS!!!</div>
+		<audio controls loop>
+		<source src="audio.mp3" "type=audio/mp3">
+		</audio>
+		</div>
+	
+		<nav class="navbar">
+		<div class="logo"><a href="Welcome.html">WELCOME</a></div>
+		
+		<div id="clock"></div>
+			
+	<ul>
+		<li><a href="Home.html">Home</a></li>
+		<li><a href="About.html">About</a></li>
+		<li><a href="Profile.html">Profile</a></li>
+		<li><a href="Gallery.html">Gallery</a></li>
+		<li><a href="Contact.html">Contact</a></li>
+	</ul
+	
+	</div>
+	</nav>	
+		
+		<img src="Quote.jpg" style="width:215; height:235; bottom: 290px;
+	    	left: 76%; margin-right:20px; position: absolute; border: 2px solid light-purple;
+		border-radius: 10px; box-shadow: 0 0 15px 5px rgba(155, 85, 182, 0.8);
+		background: black;">
+
+	<script>
+		function updateClock() {
+		var now = new Date();
+		var hours = now.getHours().toString().padStart(2, '0');
+		var minutes = now.getMinutes().toString().padStart(2, '0');
+		var seconds = now.getSeconds().toString().padStart(2, '0');
+		var date = now.toLocaleDateString();
+		var time = hours + ":" + minutes + ":" + seconds;
+		document.getElementById("clock").innerHTML = date + " " + time;
+		}
+		setInterval(updateClock, 1000);
+		updateClock();
+	</script>
+	
+</body>
+</head
+</html>
